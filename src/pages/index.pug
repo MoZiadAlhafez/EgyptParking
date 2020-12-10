@@ -6,70 +6,8 @@ html(lang="en")
         include ../template/layouts/navbar
 
 
-        include ../template/components/Home Components/Carousel
-        include ../template/components/Home Components/Aboutus
-        include ../template/components/Home Components/BeliefsCards
+        
 
-        .section_Dimentions.text-center.statistics
-            .container.inner_container
-                h2.section_Title Statistics 
-
-
-                .row    
-                    .col-md-3
-                        .statis.one
-                            i.icofont-box
-                            h4 Products
-                            span 22
-                    .col-md-3
-                        .statis.two
-                            i.icofont-gears
-                            h4 Services
-                            span 7
-                    .col-md-3
-                        .statis.three
-                            i.icofont-users-social
-                            h4 Clients
-                            span 18
-                    .col-md-3
-                        .statis.four
-                            i.icofont-newspaper
-                            h4 Articles
-                            span 27
-
-
-
-                //- Products
-                //- Clients "Maybe Delete It"
-                //- Years Experince
-                //- Services //=> PLUS
-                //- Articles
-
-        .section_Dimentions.portfolio
-            .container.inner_container
-                h2.section_Title from portfolio
-
-                .portfolio-row
-                    - 
-                        var images = [
-                            '3qarak.jpeg',
-                            'ElWakala.jpeg',
-                            'Mobi2Sale.a75d0fbb.jpeg',
-                            'Arweqa.jpeg',
-                            'subCity.jpg',
-                            'egabat.png',
-                            ]
-                    - for (let img of images)
-                        .portfolio-item
-                            //- i.icofont-eye-alt
-                            img.card-img-top(src=`../assets/images/portfolio/${img}` alt=img)
-                            //- .caption
-                            //-     p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            //-     button case study #[i.icofont-rounded-right]
-        .clearfix 
-        .section_Dimentions
-            .container.inner_container
-                h2.section_Title Vision & Mission 
 
 
 

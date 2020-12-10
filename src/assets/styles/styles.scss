@@ -5,215 +5,194 @@
 @import "./sass/template/components/carousel";
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
 @import "./sass/template/components/beliefscards";
+@import "./sass/BassantStyles/ourproducts.scss";
 
-
-$BoxesColors: "one"#28c7fa,
-"two"#775ada,
-"three"#002651,
-"four"#ff304f;
+$BoxesColors: "one"#28c7fa, "two"#775ada, "three"#002651, "four"#ff304f;
 
 body {
-    text-transform: capitalize;
-    font-family: 'Cairo', sans-serif;
-    overflow-x: hidden;
-    padding-top: 50px;
-    height: 5000px;
-
+	text-transform: capitalize;
+	font-family: 'Cairo', sans-serif;
+	overflow-x: hidden;
+	padding-top: 50px;
+	height: 5000px;
 }
-
-
 
 .about {
+	.about-text {
+		display: flex;
+		align-items: center;
+		height: 100%;
 
-    .about-text {
-        display: flex;
-        align-items: center;
-        height: 100%;
+		p {
+			color: #555;
+			line-height: 1.8;
+			// font-size: 5vh;
+		}
+	}
 
-        p {
-            color: #555;
-            line-height: 1.8;
-            // font-size: 5vh;
-        }
-    }
+	.about-image {
+		position: relative;
 
-    .about-image {
-        position: relative;
+		img {
+			box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+			width: 80%;
+			position: relative;
+			z-index: 1;
+			display: block;
+			margin: auto;
+			border-radius: 10px;
+		}
 
-        img {
-            box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-            width: 80%;
-            position: relative;
-            z-index: 1;
-            display: block;
-            margin: auto;
-            border-radius: 10px
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: $SKY_BLUE;
-            border-radius: 10px;
-        }
-    }
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 5px;
+			height: 100%;
+			background: $SKY_BLUE;
+			border-radius: 10px;
+		}
+	}
 }
 
-
-
 .statistics {
+	.statis {
+		// transition: .2s;
 
+		&:hover {
+			// transform: scale(1.2);
+			// box-shadow: 0 15px 30px rgba(0, 0, 0, .2);
 
-    .statis {
-        // transition: .2s;
+			i {
+				border-radius: 10px;
+			}
+		}
 
-        &:hover {
-            // transform: scale(1.2);
-            // box-shadow: 0 15px 30px rgba(0, 0, 0, .2);
+		h4 {
+			margin: 0;
+			font-size: 26px;
+			color: #666;
+		}
 
-            i {
-                border-radius: 10px;
-            }
-        }
+		span {
+			display: block;
+			font-size: 22px;
+			color: #888;
+		}
 
-        h4 {
-            margin: 0;
-            font-size: 26px;
-            color: #666;
-        }
+		i {
+			font-size: 60px;
+			color: #fff;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			display: block;
+			margin: auto;
+			transition: .2s;
+		}
+	}
 
-        span {
-            display: block;
-            font-size: 22px;
-            color: #888;
-        }
-
-        i {
-            font-size: 60px;
-            color: #fff;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
-            text-align: center;
-            display: block;
-            margin: auto;
-            transition: .2s;
-
-        }
-    }
-
-    @each $name,
-    $color in $BoxesColors {
-        .statis.#{$name} {
-            i {
-                background-color: $color;
-
-
-
-            }
-
-        }
-    }
+	@each $name, $color in $BoxesColors {
+		.statis.#{$name} {
+			i {
+				background-color: $color;
+			}
+		}
+	}
 }
 
 .portfolio {
+	.portfolio-item {
+		position: relative;
+		overflow: hidden;
+		text-align: center;
 
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 
+		img {
+			width: 100%;
+			border: 1px solid #ddd;
 
-    .portfolio-item {
-        position: relative;
-        overflow: hidden;
-        text-align: center;
+			transition: all .3s;
+		}
 
-        &:hover {
-            img {
-                transform: scale(1.1);
-            }
-        }
+		&:first-of-type {
+			float: left;
 
-        img {
-            width: 100%;
-            border: 1px solid #ddd;
+			width: 50%;
 
-            transition: all .3s;
-        }
+			img {
+				height: 300px;
+			}
 
-        &:first-of-type {
-            float: left;
+			// .caption {
 
-            width: 50%;
+			//     p {
+			//         font-size: 36px;
+			//         color: #fff;
+			//     }
+			// }
 
-            img {
-                height: 300px;
-            }
+			> i {
+				font-size: 24px;
+			}
+		}
 
-            // .caption {
+		&:nth-of-type(2),
+		&:nth-of-type(3),
+		&:nth-of-type(5),
+		&:nth-of-type(6) {
+			width: 25%;
+			float: left;
 
-            //     p {
-            //         font-size: 36px;
-            //         color: #fff;
-            //     }
-            // }
+			// .caption {
 
-            >i {
-                font-size: 24px;
-            }
-        }
+			//     p {
+			//         font-size: 14px;
+			//         color: #fff;
+			//     }
 
-        &:nth-of-type(2),
-        &:nth-of-type(3),
-        &:nth-of-type(5),
-        &:nth-of-type(6) {
-            width: 25%;
-            float: left;
+			//     button {
+			//         padding: 5px 10px;
+			//         font-size: 14px;
+			//     }
+			// }
 
+			img {
+				height: 150px;
+			}
 
-            // .caption {
+			> i {
+				font-size: 16px;
+			}
+		}
 
-            //     p {
-            //         font-size: 14px;
-            //         color: #fff;
-            //     }
+		&:nth-of-type(4) {
+			width: 50%;
+			float: right;
 
-            //     button {
-            //         padding: 5px 10px;
-            //         font-size: 14px;
-            //     }
-            // }
+			img {
+				height: 300px;
+			}
 
-            img {
-                height: 150px;
-            }
+			> i {
+				font-size: 24px;
+			}
 
-            >i {
-                font-size: 16px;
-            }
-        }
+			// .caption {
 
-        &:nth-of-type(4) {
-            width: 50%;
-            float: right;
-
-            img {
-                height: 300px;
-            }
-
-            >i {
-                font-size: 24px;
-            }
-
-            // .caption {
-
-            //     p {
-            //         font-size: 36px;
-            //         color: #fff;
-            //     }
-            // }
-        }
-    }
+			//     p {
+			//         font-size: 36px;
+			//         color: #fff;
+			//     }
+			// }
+		}
+	}
 }
