@@ -1,0 +1,219 @@
+@import "./sass/helpers/colors_schema";
+@import "./sass/helpers/classes";
+@import "./sass/helpers/mixins";
+@import "./sass/template/layouts/navbar";
+@import "./sass/template/components/carousel";
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+@import "./sass/template/components/beliefscards";
+
+
+$BoxesColors: "one"#28c7fa,
+"two"#775ada,
+"three"#002651,
+"four"#ff304f;
+
+body {
+    text-transform: capitalize;
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+    padding-top: 50px;
+    height: 5000px;
+
+}
+
+
+
+.about {
+
+    .about-text {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        p {
+            color: #555;
+            line-height: 1.8;
+            // font-size: 5vh;
+        }
+    }
+
+    .about-image {
+        position: relative;
+
+        img {
+            box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+            width: 80%;
+            position: relative;
+            z-index: 1;
+            display: block;
+            margin: auto;
+            border-radius: 10px
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: $SKY_BLUE;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
+.statistics {
+
+
+    .statis {
+        // transition: .2s;
+
+        &:hover {
+            // transform: scale(1.2);
+            // box-shadow: 0 15px 30px rgba(0, 0, 0, .2);
+
+            i {
+                border-radius: 10px;
+            }
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 26px;
+            color: #666;
+        }
+
+        span {
+            display: block;
+            font-size: 22px;
+            color: #888;
+        }
+
+        i {
+            font-size: 60px;
+            color: #fff;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            display: block;
+            margin: auto;
+            transition: .2s;
+
+        }
+    }
+
+    @each $name,
+    $color in $BoxesColors {
+        .statis.#{$name} {
+            i {
+                background-color: $color;
+
+
+
+            }
+
+        }
+    }
+}
+
+.portfolio {
+
+
+
+    .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            width: 100%;
+            border: 1px solid #ddd;
+
+            transition: all .3s;
+        }
+
+        &:first-of-type {
+            float: left;
+
+            width: 50%;
+
+            img {
+                height: 300px;
+            }
+
+            // .caption {
+
+            //     p {
+            //         font-size: 36px;
+            //         color: #fff;
+            //     }
+            // }
+
+            >i {
+                font-size: 24px;
+            }
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+            width: 25%;
+            float: left;
+
+
+            // .caption {
+
+            //     p {
+            //         font-size: 14px;
+            //         color: #fff;
+            //     }
+
+            //     button {
+            //         padding: 5px 10px;
+            //         font-size: 14px;
+            //     }
+            // }
+
+            img {
+                height: 150px;
+            }
+
+            >i {
+                font-size: 16px;
+            }
+        }
+
+        &:nth-of-type(4) {
+            width: 50%;
+            float: right;
+
+            img {
+                height: 300px;
+            }
+
+            >i {
+                font-size: 24px;
+            }
+
+            // .caption {
+
+            //     p {
+            //         font-size: 36px;
+            //         color: #fff;
+            //     }
+            // }
+        }
+    }
+}

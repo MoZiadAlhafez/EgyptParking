@@ -1,0 +1,33 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+
+
+
+
+}
+
+@mixin vertical-list {
+    @include reset-list;
+
+    li {
+        margin: 10px 0;
+    }
+}
+
+@mixin reset-link {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin transition-ease-i-o {
+    transition: all .3s ease-in-out;
+}

@@ -1,0 +1,31 @@
+//- mixin Navbar
+
+- 
+    var links = [
+        {title: "home", icon: "icofont-ui-home"},
+        {title: "about us", icon: "icofont-info-circle"},
+        {title: "services", icon: "icofont-gears"},
+        {title: "portfolio", icon: "icofont-ui-folder"},
+        {title: "our team", icon: "icofont-users-social"},
+        {title: "blog", icon: "icofont-newspaper"},
+        {title: "courses", icon: "icofont-book"},
+
+        {title: "contanct", icon: "icofont-support-faq"},
+    ] 
+
+header
+    .logo
+        //- | Logo
+        img(src="../assets/images/algo-logo.jpg" alt="")
+    nav
+        ul
+            //- li: a(href='#').active #[i.fa.fa-home] home
+            - for (let link of links)
+                li: a(href='aboutus.html' class=link.title === 'home' ? 'active' : '' ) #[i(class=link.icon)] #{link.title}
+            //- li: a(href='#') #[i.fa.fa-cog] services
+            //- li: a(href='#') #[i.fa.fa-users] team
+            //- li: a(href='#') #[i.fa.fa-folder] portfolio
+            //- li: a(href='#') #[i.fa.fa-phone] contact
+    .menu-toggle
+        i.icofont-justify-all
+

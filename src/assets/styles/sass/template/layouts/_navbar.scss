@@ -1,0 +1,106 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 9999;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
+}
+
+header .logo {
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+  display: flex;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  color: $DARK_BLUE;
+  padding: 0 20px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+header nav ul li a:hover,
+header nav ul li a.active,
+header nav ul li a:focus {
+  background: $SKY_BLUE;
+  color: #fff;
+}
+
+div.menu-toggle {
+  color: #fff;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  display: none;
+}
+
+div.menu-toggle i {
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 0 10px;
+  }
+
+  div.menu-toggle {
+    display: block;
+  }
+
+  header nav {
+    // display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+
+  header nav.show_navbar {
+    left: 0;
+  }
+
+  header nav ul {
+    display: block;
+    background: #262626;
+    text-align: center;
+    height: 100%;
+
+    li a {
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+  }
+}
