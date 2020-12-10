@@ -1,0 +1,27 @@
+$primary-color: #0078d4;
+
+.our-product-hero-img {
+	width: 100vw;
+	height: 79vh;
+	background-size: cover;
+}
+.our-products-section-header {
+	color: #fff;
+	margin-top: 100px;
+	font-size: 70px;
+	text-shadow: 0.1rem 0.1rem 0.1rem #000;
+}
+.par-title {
+	color: $primary-color;
+}
+
+.img-par {
+	color: dimgray;
+	line-height: 35px;
+	font-weight: 600;
+}
+
+.img-sub-par {
+	color: darkgray;
+	padding-left: 10px;
+}
